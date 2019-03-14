@@ -1,0 +1,42 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="../src/index.js"></script>
+</head>
+<body>
+    <script>
+
+var k=1;
+    var sum=0;
+    var arr=[];
+    var number=72300914;
+    base=160;
+    var i=2;
+    while (i<=base){
+     if (base%i==0){
+     arr.push([i])
+     base=base/i;
+    }
+     else {
+    i++};
+    };
+    document.writeln(arr); 
+    var x=Math.max(...arr);
+    var y=arr.filter(item => item ==x).length
+    var a=arr.filter(item => item ==2).length
+    document.writeln(y);
+    document.writeln(a);
+    while ((Math.floor(number/(Math.pow(x,k))))>=1) {
+      sum+=Math.floor(number/(Math.pow(x,k)));
+      k++;
+}; 
+document.writeln(Math.floor((sum/y)));
+        </script>
+    
+</body>
+</html>
